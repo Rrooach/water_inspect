@@ -1,0 +1,185 @@
+
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户留言</title>
+    <link href="../static/bootstrap1/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="../static/CSS/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/CSS/jquery-labelauty.css">
+</head>
+
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">基于灰色模型的水质污染监测与预测系统</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="index">
+                <a class="nav-link" href="index.html">
+                    <i class="fa fa-fw fa-dashboard"></i>
+                    <span class="nav-link-text">总体数据</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="usercommand">
+                <a class="nav-link" href="usercommand.html">
+                    <i class="fa fa-fw fa-area-chart"></i>
+                    <span class="nav-link-text">用户管理</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="note">
+                <a class="nav-link" href="note.html">
+                    <i class="fa fa-fw fa-table"></i>
+                    <span class="nav-link-text" style="color:white">用户留言</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="commander">
+                <a class="nav-link" href="commander.html">
+                    <i class="fa fa-fw fa-table"></i>
+                    <span class="nav-link-text">管理员管理</span>
+                </a>
+            </li>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- 左侧隐藏按钮 -->
+
+  <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link mr-lg-2" id="alertsDropdown" href="#">
+            <i class="fa fa-fw fa-user"></i>
+            管理员
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <form class="form-inline my-2 my-lg-0 mr-lg-2">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search for...">
+              <span class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>退出</a>
+        </li>
+      </ul>
+
+        </ul>
+    </div>
+</nav>
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="card-header">
+            <i class="fa fa-table"></i>　用户留言
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>用户昵称</th>
+                        <th>留言内容</th>
+                        <th>留言时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>用户昵称</th>
+                        <th>留言内容</th>
+                        <th>留言时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    <tr>
+                        <td>张三</td>
+                        <td>网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢</td>
+                        <td>2018/04/02</td>
+                        <td><a href="#">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢</td>
+                        <td>2018/04/02</td>
+                        <td><a href="#">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢</td>
+                        <td>2018/04/02</td>
+                        <td><a href="#">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢</td>
+                        <td>2018/04/02</td>
+                        <td><a href="#">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢</td>
+                        <td>2018/04/02</td>
+                        <td><a href="#">删除</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card-footer small text-muted">更新日期：2018-4-2</div>
+    </div>
+</div>
+    <script src="../static/jquery/jquery.min.js"></script>
+    <script src="../static/bootstrap1/js/bootstrap.bundle.js"></script>
+    <script src="../static/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../static/chart.js/Chart.js"></script>
+    <script src="../static/datatables/jquery.dataTables.js"></script>
+    <script src="../static/datatables/dataTables.bootstrap4.js"></script>
+    <script src="../static/JS/sb-admin.js"></script>
+    <script src="../static/JS/sb-admin-datatables.min.js"></script>
+    <script src="../static/JS/sb-admin-charts.js"></script>
+    <script src="../static/JS/jquery-1.8.3.min.js"></script>
+    <script src="../static/JS/jquery-labelauty.js"></script>
+    <script type="text/javascript" src="../static/jquery/jquery-3.3.1.min.js"></script>
+{#<script src="{{ url_for('static', filename="../static/jquery/jquery.min.js") }}"></script>#}
+{#<script src="{{ url_for('static', filename="../static/bootstrap1/js/bootstrap.bundle.js") }}"></script>#}
+{#<script src="{{ url_for('static', filename="../static/jquery-easing/jquery.easing.min.js") }}"></script>#}
+{#<script src="{{ url_for('static', filename="../static/chart.js/Chart.js") }}"></script>#}
+
+<!-- <script src="datatables/jquery.dataTables.js"></script> -->
+{##}
+{#<script src="{{ url_for('static', filename="../static/datatables/dataTables.bootstrap4.js") }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename="../static/JS/sb-admin.js") }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename="../static/JS/sb-admin-datatables.min.js") }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename="../static/JS/sb-admin-charts.js") }}"></script>#}
+
+
+</body>

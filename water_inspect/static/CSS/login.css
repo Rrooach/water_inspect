@@ -1,0 +1,260 @@
+.bg{
+    background: #F0F4F3;
+    padding: 11% 0;
+}
+.both{
+    border-radius: 30px;
+    margin-top: -2%
+}
+
+
+.bg2{
+    background: #3AA9A9;
+}
+.bg1{
+    background: white;
+}
+
+.left{
+    transition: all 2s;
+}
+
+.left_header img{
+    width: 50px;
+    height: 50px;
+    margin: 20px 0 0px 20px;
+}
+.left_body{
+    /* margin: 0 auto; */
+    text-align: center;
+    margin: 5% 0;
+
+}
+
+.left_body .sign{
+    font-size: 50px;
+    color: #3AA9A9;
+}
+
+.left_body .link{
+    margin: 20px 0;
+
+}
+
+a{
+    color:black;
+}
+
+.left_body .link .f{
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    line-height: 40px;
+    /* font:bolder; */
+    margin: 0 15px;
+    color: black;
+    cursor: pointer;
+}
+
+.left_body .link .g{
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    line-height: 40px;
+    /* font:bolder; */
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.left_body .link .in{
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    line-height: 40px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.left_body .tip{
+    margin: 20px 0;
+    color: gray;
+
+}
+
+.form-control{
+    /* background: #F4F8F7; */
+}
+
+.left_body .account .email{
+    
+}
+
+.left_body .account .email .col-md-6 input{
+   /* background: black; */
+
+}
+
+.left_body .account .forgot a{
+    color: black;
+    padding: 10px;
+}
+
+.left_body .account .submit1{
+    padding: 8px 60px;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+    background: #3AA9A9;
+    border: 1px solid #3AA9A9;
+    margin-bottom: 8%;
+}
+
+.right{
+    /* background:white; */
+    transition: all 2s;
+}
+
+.right_header{
+    text-align: center;
+    color: white;
+    margin-top: 170px;
+}
+
+.right_body{
+    text-align: center;
+    color: white;
+    padding: 10px 30px;
+    margin: 30px 0 33px 0;
+}
+
+.right_footer{
+    text-align: center;
+}
+
+ .submit2{
+    padding: 8px 60px;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+    background: #3AA9A9;
+    border: 1px solid white;
+    /* margin-bottom: 42%; */
+
+}
+
+
+
+.right_body_2{
+    /* margin: 0 auto; */
+    text-align: center;
+    margin: 10% 0 0 0;
+    display: none;
+}
+
+.right_body_2 .sign{
+    font-size: 50px;
+    color: #3AA9A9;
+}
+
+.right_body_2 .link{
+    margin: 20px 0;
+
+}
+
+a{
+    color:black;
+}
+
+.right_body_2 .link .f{
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    line-height: 40px;
+    /* font:bolder; */
+    margin: 0 15px;
+    color: black;
+    cursor: pointer;
+}
+
+.right_body_2 .link .g{
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    line-height: 40px;
+    /* font:bolder; */
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.right_body_2 .link .in{
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    line-height: 40px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.right_body_2 .tip{
+    margin: 20px 0;
+    color: gray;
+
+}
+
+.right_body_2 .account .forgot a{
+    color: black;
+    padding: 10px;
+}
+
+.right_body_2 .account .submit1{
+    padding: 8px 60px;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+    background: #3AA9A9;
+    border: 1px solid #3AA9A9;
+    margin-bottom: 8%;
+    margin-top: 5%;
+}
+
+.left_body_2{
+    display: none;
+}
+.left_body_2 .right_header{
+    text-align: center;
+    color: white;
+    margin-top: 140px;
+}
+
+.left_body_2 .right_body{
+    text-align: center;
+    color: white;
+    padding: 10px 30px;
+    margin: 30px 0 33px 0;
+}
+
+.left_body_2 .right_footer{
+    text-align: center;
+}
+
+/* #whole_left{
+    display: none;
+} */

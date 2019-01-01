@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link href={{ url_for('static', filename='CSS/login.css') }} rel="stylesheet">
+    <script type="text/javascript" src={{ url_for('static', filename='JS/jquery-3.3.1.min.js') }}></script>
+    <script type="text/javascript" src={{ url_for('static', filename='JS/vue.js/vue.js') }}></script>
+    <script type="text/javascript" src={{ url_for('static', filename='JS/login.js') }}></script>
+{% endblock %}
+
+
+{% block body %}
+    <div class="bg">
+        <div class="container both">
+            <div class="row" style="display: -webkit-box;">
+                <div class="col-md-8 left bg1" id="left">
+
+                    <div class="row left_body_2" id="left_body_2">
+                        <div class="right_header">
+                            <h1>Welcome Back!</h1>
+                        </div>
+
+                        <div class="right_body">
+                            <h4>To keep connected with us please login with your personal info</h4>
+                        </div>
+                        <div class="right_footer">
+                            <button type="submit" class="submit2" id="sign_in">SIGN IN</button>
+                        </div>
+                    </div>
+
+                    <div id="whole_left">
+                        <div class="left_header">
+                            <a><img src={{ url_for('static', filename='Image/logo.jpg') }}></a>
+                        </div>
+                        <div class="left_body">
+                            <div>
+                                <h1 class="sign">Sign in to Hartt</h1>
+                            </div>
+                            <div class="link">
+                                <div class="f"><a>f</a></div>
+                                <div class="g"><a>t</a></div>
+                                <div class="in"><a>i</a></div>
+                            </div>
+
+                            <div class="tip">
+                                <h5>or use your email account</h5>
+                            </div>
+
+                            <form class="form-horizontal account" method="post" action={{ url_for('blue_auth.login') }} >
+                                <div class="form-group email">
+                                    <label for="inputEmail3" class="col-md-4 control-label">Email :</label>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" name="inputEmail1" id="inputEmail1" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group password">
+                                    <label for="inputPassword3" class="col-md-4 control-label">Password :</label>
+                                    <div class="col-md-6">
+                                        <input type="password" class="form-control" name="inputPassword1" id="inputPassword1"
+                                               placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group remember">
+                                    <div class="">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Remember me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group forgot col-md-offset-4">
+                                    <h4><a href="#">Forgot your password?</a></h4>
+                                </div>
+
+                                <button type="submit" class="submit1">SIGN IN</button>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 right bg2" id="right">
+                    <div id="whole_right">
+                        <div class="row">
+                            <div class="right_header">
+                                <h1>Hello,Friend!</h1>
+                            </div>
+
+                            <div class="right_body">
+                                <h4>Enter your personal details and start journey with us</h4>
+                            </div>
+                            <div class="right_footer">
+                                <button type="submit" class="submit2" id="sign_up">SIGN UP</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right_body_2" id="right_body_2">
+                        <div>
+                            <h1 class="sign">Create account</h1>
+                        </div>
+                        <div class="link">
+                            <div class="f"><a>f</a></div>
+                            <div class="g"><a>t</a></div>
+                            <div class="in"><a>i</a></div>
+                        </div>
+
+                        <div class="tip">
+                            <h5>or use your email for registration</h5>
+                        </div>
+
+                       <form class="form-horizontal account" method="post" action={{ url_for('blue_register_and_confirm.register') }} >
+                            <div class="form-group email">
+                                <label for="inputEmail3" class="col-md-4 control-label">Name :</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="inputName2" id="inputName2" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group password">
+                                <label for="inputPassword3" class="col-md-4 control-label">Email :</label>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" name="inputEmail2" id="inputEmail2" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group password">
+                                <label for="inputPassword3" class="col-md-4 control-label">Password :</label>
+                                <div class="col-md-6">
+                                    <input type="password" class="form-control" name="inputPassword2" id="inputPassword2"
+                                           placeholder="Password">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit1">SIGN UP</button>
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
