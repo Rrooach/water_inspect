@@ -7,7 +7,6 @@ from water_inspect.app.models import User
 
 blue_auth = Blueprint('blue_auth', __name__)
 
-
 class NameForm(FlaskForm):
     name = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
     psw = PasswordField('Password', validators=[DataRequired()])

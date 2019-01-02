@@ -1,9 +1,10 @@
 from flask import jsonify
-from water_inspect.data.takeout import res
 import water_inspect.config
 from flask import Blueprint, redirect, flash, render_template, request, url_for
 from flask_login import login_user, login_required
 from water_inspect.app.models import User
+from water_inspect.data.takeout import takeout
+from water_inspect.data.cal import GM
 
 import json
 blue_content = Blueprint('blue_content', __name__)
@@ -36,9 +37,25 @@ def islog():
         data = request.get_data()
         data = str(data, encoding = "utf-8")
         data = json.loads(data)
-        water_inspect.config.interval = data['id']
-        water_inspect.config.time = data['time']
-        info = res
+        water_inspect.config.param = data['attribute']
+        water_inspect.config.time = data['interval']
+        # 声明一个take类
+        Take = takeout(water_inspect.config.param, water_inspect.config.time)
+        # 计算所需的时间
+        Take.time_diff()
+        TimeTable = Take.time_output()
+        # 获取所需数据
+        water_inspect.config.result = Take.get_data()
+        # 开始生成预测序列
+        m = 1
+        gm = GM()
+        Diff, Prb = gm.mat_cal()
+        res = gm.perdict(Diff, Prb, m)
+        for i in range(0, res.size):
+            water_inspect.config.result.append(res[i])
+        water_inspect.config.result = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        info = water_inspect.config.result
         return jsonify(info)
     else:
         return render_template('index.html')
@@ -48,3 +65,17 @@ def islog():
 #     if session.get('email') is None:
 #         return '未登录， 拦截'
 #     return None
+
+#redirect to commander page
+@blue_content.route('/commander', methods=['GET', 'POST'])
+def commander():
+    return render_template('commander.html')
+
+#redirect to note page
+@blue_content.route('/note', methods=['GET', 'POST'])
+def note():
+    return render_template('note.html')
+#redirect to usercommand page
+@blue_content.route('/usercommand', methods=['GET', 'POST'])
+def usercommand():
+    return render_template('usercommand.html')

@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>总体数据</title>
-
     <link href="../static/bootstrap1/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
     <link href="../static/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
     <link href="../static/CSS/sb-admin.css" rel="stylesheet">
-
     <link rel="stylesheet" href="../static/CSS/jquery-labelauty.css">
-
     <style>
       ul { list-style-type: none;}
       li { display: inline-block;padding: 0 8px;}
@@ -30,7 +24,6 @@
     <!-- <script type="text/javascript" src="chart.js/api.js"></script> -->
     <script type="text/javascript" src="../static/chart.js/bmap.min.js"></script>
     <script type="text/javascript" src="../static/chart.js/simplex.js"></script>
-
     <script type="text/javascript" src="../static/jquery/jquery-3.3.1.min.js"></script>
 
 
@@ -38,32 +31,32 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">基于灰色模型的水质污染监测与预测系统</a>
+    <a class="navbar-brand" href="/">基于灰色模型的水质污染监测与预测系统</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="/">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text" style="color:white">总体数据</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="usercommand.html">
+          <a class="nav-link" href="/usercommand">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">用户管理</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="note">
-          <a class="nav-link" href="note.html">
+          <a class="nav-link" href="/note">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">用户留言</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-            <a class="nav-link" href="./commander.html">
+            <a class="nav-link" href="/commander">
                 <i class="fa fa-fw fa-table"></i>
                 <span class="nav-link-text">管理员管理</span>
             </a>
@@ -125,8 +118,8 @@
               <h4>属性</h4>
               <ul class="dowebok">
                 <li><input type="radio" name="radio1" data-labelauty="温度" value="wendu" checked="checked" onclick="monitor1()"></li>
-                <li><input type="radio" name="radio1" data-labelauty="浑浊度" value="hunzhuodu" onclick="monitor1()"></li>
-                <li><input type="radio" name="radio1" data-labelauty="溶氧量" value="rongyangliang" onclick="monitor1()"></li>
+                <li><input type="radio" name="radio1" data-labelauty="浑浊度" value="zhuodu" onclick="monitor1()"></li>
+                <li><input type="radio" name="radio1" data-labelauty="溶氧量" value="rongyang" onclick="monitor1()"></li>
                 <li><input type="radio" name="radio1" data-labelauty="PH" value="ph" onclick="monitor1()"></li>
                 <!-- <li><input type="radio" name="radio" disabled data-labelauty="不可用"></li> -->
               </ul>
@@ -134,14 +127,14 @@
             <div>
                 <h4>时间段</h4>
                 <ul class="dowebok">
-                  <li><input type="radio" name="radio2" data-labelauty="最近一小时" value="1" checked="checked" onclick="monitor2()"></li>
-                  <li><input type="radio" name="radio2" data-labelauty="最近一天" value="2" onclick="monitor2()"></li>
-                  <li><input type="radio" name="radio2" data-labelauty="最近一周" value="3" onclick="monitor2()"></li>
-                  <li><input type="radio" name="radio2" data-labelauty="最近一个月" value="4" onclick="monitor2()"></li>
+                  <li><input type="radio" name="radio2" data-labelauty="最近一小时" value="1" checked="checked" onclick="monitor1()"></li>
+                  <li><input type="radio" name="radio2" data-labelauty="最近一天" value="2" onclick="monitor1()"></li>
+                  <li><input type="radio" name="radio2" data-labelauty="最近一周" value="3" onclick="monitor1()"></li>
+                  <li><input type="radio" name="radio2" data-labelauty="最近一个月" value="4" onclick="monitor1()"></li>
                   <!-- <li><input type="radio" name="radio" disabled data-labelauty="不可用"></li> -->
                 </ul>
             </div>
-
+            <button id="test">test</button>
           </div>
 
 
@@ -163,29 +156,16 @@
     </div>
 
 
-
-
-
-
     <div>
     <script src="../static/jquery/jquery.min.js"></script>
-
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <script src="../static/jquery-easing/jquery.easing.min.js"></script>
-
     <script src="../static/JS/chart.js/Chart.js"></script>
-
     <script src="../static/datatables/jquery.dataTables.js"></script>
-
     <script src="../static/datatables/dataTables.bootstrap4.js"></script>
-
     <script src="../static/JS/sb-admin.js"></script>
-
     <!-- <script src="js/sb-admin-datatables.min.js"></script> -->
-
     <!-- <script src="js/sb-admin-charts.js"></script> -->
-
     <script src="../static/JS/jquery-1.8.3.min.js"></script>
     <script src="../static/JS/jquery-labelauty.js"></script>
     <script>
@@ -215,8 +195,6 @@
                   }
               },
               legend: {
-                  // data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
-                  // data: ['搜索引擎']
               },
               toolbox: {
                   feature: {
@@ -233,7 +211,7 @@
                   {
                       type: 'category',
                       boundaryGap: false,
-                      data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                      data: ['22:20:30', '22:20:30', '22:20:30', '22:20:30', '22:20:30', '22:20:30', '22:20:30']
                   }
               ],
               yAxis: [
@@ -242,34 +220,6 @@
                   }
               ],
               series: [
-                  // {
-                  //     name:'邮件营销',
-                  //     type:'line',
-                  //     stack: '总量',
-                  //     areaStyle: {},
-                  //     data:[120, 132, 101, 134, 90, 230, 210]
-                  // },
-                  // {
-                  //     name:'联盟广告',
-                  //     type:'line',
-                  //     stack: '总量',
-                  //     areaStyle: {},
-                  //     data:[220, 182, 191, 234, 290, 330, 310]
-                  // },
-                  // {
-                  //     name:'视频广告',
-                  //     type:'line',
-                  //     stack: '总量',
-                  //     areaStyle: {},
-                  //     data:[150, 232, 201, 154, 190, 330, 410]
-                  // },
-                  // {
-                  //     name:'直接访问',
-                  //     type:'line',
-                  //     stack: '总量',
-                  //     areaStyle: {normal: {}},
-                  //     data:[320, 332, 301, 334, 390, 330, 320]
-                  // },
                   {
                       // name: '搜索引擎',
                       type: 'line',
@@ -290,45 +240,49 @@
               myChart.setOption(option, true);
           }
 
-          var oControl2 = document.getElementById("control2");
+          {#var oControl2 = document.getElementById("control2");#}
 
-
-
-
-
-          // oControl2.onclick = function () {
-          //     var obj = eval(option);
-          //     // alert(obj.constructor);
-          //     alert(obj.legend.data);
-          //     alert(obj.series[0].name);
-          //     alert(obj.series[0].data);
-          //     alert(obj.xAxis[0].data);
-          // }
       });
-  
-  
-  
   </script>
 
   <script>
-      function monitor1(){
-			var attribute;
+      var attribute;
+      var interval;
+     function monitor1(){
+
 			$("input[name='radio1']").each(function(){
             if(this.checked){
 				attribute=$(this).val();
 				alert(attribute)
             }
 		})
-		}
-		function monitor2(){
-			var interval;
+
 			$("input[name='radio2']").each(function(){
             if(this.checked){
 				interval=$(this).val();
 				alert(interval)
             }
 		})
+
+        $.ajax({
+             type: "POST",
+             url: "/success",
+             data:JSON.stringify( {attribute:attribute,interval:interval}),
+             dataType: "json",
+             success: function(data){
+                 console.log(123);console.log(data);console.log(456);
+                alert(123)
+                 alert(data)
+             }
+		});
 		}
+
+
+
+
+
+
+
   </script>
 
 </div>

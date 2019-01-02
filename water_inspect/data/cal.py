@@ -6,19 +6,21 @@ fetch中取得数据
 
 import numpy as np
 import math
-from water_inspect.data.takeout import result
+import water_inspect.config
 
-
+history_data = water_inspect.config.result
 history_data = [132, 92, 118, 130, 187, 207]
-history_data = result
-m = int(input())
-print(type(m))
+# m = int(input())
+# print(type(m))
+
+
 class GM:
-    def __init__(self, history_data):    #history_data:your input list,  m:the year you want to perdict
-        self.n = len(history_data)
-        self.X0 = np.array(history_data)
+    def __init__(self):    #history_data:your input list,  m:the year you want to perdict
+        self.history_data = history_data
+        self.n = len(self.history_data)
+        self.X0 = np.array(self.history_data)
         # 累加生成
-        self.history_data_agg = [sum(history_data[0:i + 1]) for i in range(self.n)]
+        self.history_data_agg = [sum(self.history_data[0:i + 1]) for i in range(self.n)]
         self.X1 = np.array(self.history_data_agg)
 
     def mat_cal(self):
@@ -74,36 +76,34 @@ class GM:
     def perdict(self, C, P, m):
         # 预测精度为 一级
         n, X0, u, a = self.n, self.X0, self.u, self.a
+        f = np.zeros(m)
         if C < 0.35 and P > 0.95:
             print("1")
             # 请输入需要预测的年数
-            f = np.zeros(m)
             for i in range(0, m):
                 f[i] = (X0[0] - u / a) * (1 - math.exp(a)) * math.exp(-a * (i + n))
-            return f
         # 预测精度为 二级
         elif P > 0.80 and C < 0.45:
             print("2")
             # 请输入需要预测的年数
-            f = np.zeros(m)
             for i in range(0, m):
                 f[i] = (X0[0] - u / a) * (1 - math.exp(a)) * math.exp(-a * (i + n))
-            return f
         # 预测精度为 三级
         else:
             print("3")
             # 请输入需要预测的年数
-            f = np.zeros(m)
             for i in range(0, m):
                 f[i] = (X0[0] - u / a) * (1 - math.exp(a)) * math.exp(-a * (i + n))
-            return f
+        return f
 
 
-gm = GM(history_data)
-res = []
-Diff, Prb = gm.mat_cal()
-res = gm.perdict(Diff, Prb, m)
-
-length = len(res)
-for i in range(0, length):
-    print("%lf "%res[i])
+# gm = GM()
+# Diff, Prb = gm.mat_cal()
+#
+# res = []
+# #to access res's length, must use res.size
+# res = gm.perdict(Diff, Prb, 1)
+# length = len(res)
+#
+# for i in range(0, length):
+#     print("asdasda%lf "%res[i])
