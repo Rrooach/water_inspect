@@ -134,7 +134,7 @@
                   <!-- <li><input type="radio" name="radio" disabled data-labelauty="不可用"></li> -->
                 </ul>
             </div>
-            <button id="test">test</button>
+
           </div>
 
 
@@ -235,22 +235,28 @@
                   }
               ]
           };
-          ;
+
           if (option && typeof option === "object") {
               myChart.setOption(option, true);
           }
 
+
+
           {#var oControl2 = document.getElementById("control2");#}
 
       });
+
+
   </script>
 
   <script>
-      var attribute;
-      var interval;
-     function monitor1(){
 
-			$("input[name='radio1']").each(function(){
+function monitor1(){
+
+    var attribute;
+    var interval;
+
+      $("input[name='radio1']").each(function(){
             if(this.checked){
 				attribute=$(this).val();
 				alert(attribute)
@@ -269,14 +275,50 @@
              url: "/success",
              data:JSON.stringify( {attribute:attribute,interval:interval}),
              dataType: "json",
-             success: function(data){
-                 console.log(123);console.log(data);console.log(456);
-                alert(123)
-                 alert(data)
+             success: function(data1){
+                 {#console.log(123);console.log(data);console.log(456);#}
+                {#alert(123)#}
+                {# alert(data)#}
+                 var a = []
+                 var b = []
+                 {#alert(data1[0])#}
+                {# alert(data[0].length)#}
+                {# alert(data[0][0])#}
+                {# alert(data.length)#}
+                for (i=0;i<data1[0].length;i++) {
+                    a.push(data1[0][i])
+                }
+                    for(j=0;j<data1[1].length;j++) {
+                        b.push(data1[1][j])
+                    }
+                {#    }#}
+                {#alert(a)#}
+                {#alert(b)#}
+
+                 var obj = eval(option);
+            // alert(obj.constructor);
+            {#alert(obj.legend.data);#}
+            {#alert(obj.series[0].name);#}
+            {#alert(obj.series[0].data);#}
+            obj.series[0].data = a
+                 {#alert(obj.series[0].data);#}
+            {#alert(obj.xAxis[0].data);#}
+            obj.xAxis[0].data = b
+                 {#alert(obj.xAxis[0].data);#}
+
+
+            var dom = document.getElementById("container");
+          var myChart = echarts.init(dom);
+               if (option && typeof option === "object") {
+              myChart.setOption(option, true);
+          }
              }
 		});
-		}
 
+
+
+
+		}
 
 
 

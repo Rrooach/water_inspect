@@ -39,13 +39,16 @@ def islog():
         data = json.loads(data)
         water_inspect.config.param = data['attribute']
         water_inspect.config.time = data['interval']
+        print(data['attribute'])
+        print(data['interval'])
         # 声明一个take类
         Take = takeout(water_inspect.config.param, water_inspect.config.time)
         # 计算所需的时间
-        Take.time_diff()
-        TimeTable = Take.time_output()
+        Take.data_get()
         # 获取所需数据
-        water_inspect.config.result = Take.get_data()
+        #TimeTable ->所需要的y轴， result -> x轴
+        water_inspect.config.TimeTable, water_inspect.config.result= Take.data_trans()
+
         # 开始生成预测序列
         m = 1
         gm = GM()
@@ -53,10 +56,11 @@ def islog():
         res = gm.perdict(Diff, Prb, m)
         for i in range(0, res.size):
             water_inspect.config.result.append(res[i])
-        water_inspect.config.result = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-        info = water_inspect.config.result
-        return jsonify(info)
+        water_inspect.config.result = ["asd", "asd", "adasd", "adasfddf", "adasdas", "adasda", "asdad", "adasd", "Asdasd"]
+        water_inspect.config.TimeTable = [12, 12, 323,34,234,234,234,2,1]
+        y = water_inspect.config.result
+        x = water_inspect.config.TimeTable
+        return jsonify(x, y)
     else:
         return render_template('index.html')
 

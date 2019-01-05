@@ -3,10 +3,11 @@ import time
 from flask import Flask
 from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import Column, Integer, String, BOOLEAN, BigInteger
+from sqlalchemy import Column, Integer, String, BOOLEAN, BigInteger, DateTime
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from water_inspect import app as current_app
+
 
 app = Flask(__name__)
 
@@ -31,7 +32,7 @@ def reconvert_time(stamp):
 
 class Data(db.Model):
     __tablename__ = 'data'
-    _time = Column(BigInteger, primary_key=True)  # 时间采用时间戳的方法来存储
+    time = Column(DateTime, primary_key=True)  # 时间采用时间戳的方法来存储
     wendu = Column(String(64))
     ph = Column(String(64))
     zhuodu = Column(String(64))
@@ -39,20 +40,20 @@ class Data(db.Model):
     result = Column(String(64))
 
     def __init__(self, time=None, wendu=None, ph=None, zhuodu=None, rongyang=None, result=None):
-        self._time = convert_time(time)
+        self.time = time
         self.wendu = wendu
         self.ph = ph
         self.zhuodu = zhuodu
         self.rongyang = rongyang
         self.result = result
 
-    @property
-    def time(self):
-        return reconvert_time(self._time)
-
-    @time.setter
-    def time(self, value):
-        self._time = convert_time(value)
+    # @property
+    # def time(self):
+    #     return reconvert_time(self._time)
+    #
+    # @time.setter
+    # def time(self, value):
+    #     self._time = convert_time(value)
 
 
 class User(UserMixin, db.Model):
@@ -93,11 +94,11 @@ class User(UserMixin, db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
-#
+
 # db.drop_all()
 # db.create_all()
 # u1 = User(email='12334@qq.com', username='root_admin', password='123', is_admin=True, confirmed=True)
-# u2 = User(email="982483744@qq.com", username="Ocean", password="zhangyang123", is_admin=False, confirmed=True)
+# u2 = User(email="982483744@qq.com", username="Ocean", password="zhangyang123", is_admin=True, confirmed=True)
 # db.session.add(u1)
 # db.session.add(u2)
 # db.session.commit()

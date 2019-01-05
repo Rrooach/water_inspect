@@ -78,7 +78,6 @@ class GM:
         n, X0, u, a = self.n, self.X0, self.u, self.a
         f = np.zeros(m)
         if C < 0.35 and P > 0.95:
-            print("1")
             # 请输入需要预测的年数
             for i in range(0, m):
                 f[i] = (X0[0] - u / a) * (1 - math.exp(a)) * math.exp(-a * (i + n))

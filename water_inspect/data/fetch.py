@@ -28,7 +28,7 @@ class FETCH:
         data = Data(time = self.time, wendu = self.wehdu, ph = self.ph, zhuodu = self.zhuodu, rongyang = self.rongyang)
         db.session.add(data)
         db.session.commit()
-
-fetch = FETCH()
-fetch.acquire()
-fetch.upload()
+#
+# fetch = FETCH()
+# fetch.acquire()
+# fetch.upload()
