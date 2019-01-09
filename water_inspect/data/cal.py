@@ -8,15 +8,13 @@ import numpy as np
 import math
 import water_inspect.config
 
-history_data = water_inspect.config.result
-history_data = [132, 92, 118, 130, 187, 207]
 # m = int(input())
 # print(type(m))
 
 
 class GM:
-    def __init__(self):    #history_data:your input list,  m:the year you want to perdict
-        self.history_data = history_data
+    def __init__(self, list):  # history_data:your input list,  m:the year you want to perdict
+        self.history_data = list
         self.n = len(self.history_data)
         self.X0 = np.array(self.history_data)
         # 累加生成
@@ -25,10 +23,10 @@ class GM:
 
     def mat_cal(self):
         # 计算数据矩阵B和数据向量Y
-        n, X0, X1= self.n, self.X0, self.X1
-        B = np.zeros([n - 1, 2])
-        Y = np.zeros([n - 1, 1])
-        for i in range(0, n - 1):
+        X0, X1 = self.X0, self.X1
+        B = np.zeros([self.n - 1, 2])
+        Y = np.zeros([self.n - 1, 1])
+        for i in range(0, self.n - 1):
             B[i][0] = -0.5 * (X1[i] + X1[i + 1])
             B[i][1] = 1
             Y[i][0] = X0[i + 1]
@@ -37,40 +35,40 @@ class GM:
         self.a = A[0][0]
         self.u = A[1][0]
         # 建立灰色预测模型
-        XX0 = np.zeros(n)
+        XX0 = np.zeros(self.n)
         XX0[0] = X0[0]
-        for i in range(1, n):
+        for i in range(1, self.n):
             XX0[i] = (X0[0] - self.u / self.a) * (1 - math.exp(self.a)) * math.exp(-self.a * (i));
         # 模型精度的后验差检验
         e = 0  # 求残差平均值
-        for i in range(0, n):
+        for i in range(0, self.n):
             e += (X0[i] - XX0[i])
-        e /= n
+        e /= self.n
         # 求历史数据平均值
         aver = 0;
-        for i in range(0, n):
+        for i in range(0, self.n):
             aver += X0[i]
-        aver /= n
+        aver /= self.n
         # 求历史数据方差
         s12 = 0;
-        for i in range(0, n):
+        for i in range(0, self.n):
             s12 += (X0[i] - aver) ** 2;
-        s12 /= n
+        s12 /= self.n
         # 求残差方差
         s22 = 0;
-        for i in range(0, n):
+        for i in range(0, self.n):
             s22 += ((X0[i] - XX0[i]) - e) ** 2;
-        s22 /= n
+        s22 /= self.n
         # 求后验差比值
         C = s22 / s12
         # 求小误差概率
         cout = 0
-        for i in range(0, n):
+        for i in range(0, self.n):
             if abs((X0[i] - XX0[i]) - e) < 0.6754 * math.sqrt(s12):
                 cout = cout + 1
             else:
                 cout = cout
-        P = cout / n
+        P = cout / self.n
         return C, P
 
     def perdict(self, C, P, m):
@@ -94,7 +92,6 @@ class GM:
             for i in range(0, m):
                 f[i] = (X0[0] - u / a) * (1 - math.exp(a)) * math.exp(-a * (i + n))
         return f
-
 
 # gm = GM()
 # Diff, Prb = gm.mat_cal()

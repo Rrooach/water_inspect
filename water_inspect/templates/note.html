@@ -78,7 +78,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+          <a href="/logout" class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>退出</a>
         </li>
       </ul>
@@ -109,36 +109,14 @@
                       </tr>
                     </tfoot>
                     <tbody>
-                      <tr>
-                        <td>张三</td>
-                        <td>网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢</td>
-                        <td>2018/04/02</td>
-                        <td><a href="#">删除</a></td>
-                      </tr>
-                      <tr>
-                          <td>张三</td>
-                          <td>网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢</td>
-                          <td>2018/04/02</td>
-                          <td><a href="#">删除</a></td>
-                        </tr>
-                        <tr>
-                          <td>张三</td>
-                          <td>网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢</td>
-                          <td>2018/04/02</td>
-                          <td><a href="#">删除</a></td>
-                        </tr>
-                        <tr>
-                          <td>张三</td>
-                          <td>网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢</td>
-                          <td>2018/04/02</td>
-                          <td><a href="#">删除</a></td>
-                        </tr>
-                        <tr>
-                          <td>张三</td>
-                          <td>网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢网站很好看也很实用  喜欢</td>
-                          <td>2018/04/02</td>
-                          <td><a href="#">删除</a></td>
-                        </tr>
+                        {% for note in notes %}
+                            <tr>
+                                <td>{{ note.userName }}</td>
+                                <td>{{ note.message }}</td>
+                                <td>{{ note.time }}</td>
+                                <td><a href="/note?noteid={{ note.id }}">删除</a> </td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                   </table>
                 </div>

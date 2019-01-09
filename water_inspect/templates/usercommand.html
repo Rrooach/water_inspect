@@ -82,7 +82,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+          <a href="/logout" class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>退出</a>
         </li>
       </ul>
@@ -100,74 +100,28 @@
                   <thead>
                     <tr>
                       <th>昵称</th>
-                      <th>地址</th>
-                      <th>手机号</th>
-                      <th>密码</th>
-                      <th>注册时间</th>
+                      <th>邮箱</th>
+                        <th>是否验证</th>
                       <th>操作</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
                       <th>昵称</th>
-                      <th>地址</th>
-                      <th>手机号</th>
-                      <th>密码</th>
-                      <th>注册时间</th>
+                      <th>邮箱</th>
+                        <th>是否验证</th>
                       <th>操作</th>
                     </tr>
                   </tfoot>
                   <tbody>
-                    <tr>
-                      <td>张三</td>
-                      <td>湖南省长沙市芙蓉区</td>
-                      <td>13241243511</td>
-                      <td>123456</td>
-                      <td>2018/04/02</td>
-                      <td><a href="#">删除帐号</a>/<a href="#">升为管理员</a></td>
-                    </tr>
-                    <tr>
-                        <td>张三</td>
-                        <td>湖南省长沙市芙蓉区</td>
-                        <td>13241243511</td>
-                        <td>123456</td>
-                        <td>2018/04/02</td>
-                        <td><a href="#">删除帐号</a>/<a href="#">升为管理员</a></td>
-                      </tr>
-                      <tr>
-                        <td>张三</td>
-                        <td>湖南省长沙市芙蓉区</td>
-                        <td>13241243511</td>
-                        <td>123456</td>
-                        <td>2018/04/02</td>
-                        <td><a href="#">删除帐号</a>/<a href="#">升为管理员</a></td>
-                      </tr>
-                      <tr>
-                        <td>张三</td>
-                        <td>湖南省长沙市芙蓉区</td>
-                        <td>13241243511</td>
-                        <td>123456</td>
-                        <td>2018/04/02</td>
-                        <td><a href="#">删除帐号</a>/<a href="#">升为管理员</a></td>
-                      </tr>
-                      <tr>
-                        <td>张三</td>
-                        <td>湖南省长沙市芙蓉区</td>
-                        <td>13241243511</td>
-                        <td>123456</td>
-                        <td>2018/04/02</td>
-                        <td><a href="#">删除帐号</a>/<a href="#">升为管理员</a></td>
-                      </tr>
-                      
-                      <tr>
-                        <td>张三</td>
-                        <td>湖南省长沙市芙蓉区</td>
-                        <td>13241243511</td>
-                        <td>123456</td>
-                        <td>2018/04/02</td>
-                        <td><a href="#">删除帐号</a>/<a href="#">升为管理员</a></td>
-                      </tr>
-                    
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{% if user.confirmed == True %}是{% else %}否{% endif %}</td>
+                            <td><a href="/usercommand?delete=1&userid={{ user.id }}">删除帐号</a>{% if user.is_admin == False %}/<a href="/usercommand?update=1&userid={{ user.id }}">升为管理员</a>{% endif %}</td>
+                        </tr>
+                    {% endfor %}
                   </tbody>
                 </table>
               </div>

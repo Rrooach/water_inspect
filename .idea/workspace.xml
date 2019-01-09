@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/water_inspect/data/takeout.py" line="27" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="7cc7f963-e070-4b07-a600-4b5c62781145" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/test1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/water_inspect/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/water_inspect/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/data/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/water_inspect/data/cal.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/data/cal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/water_inspect/data/fetch.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/data/fetch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/water_inspect/data/takeout.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/data/takeout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/data/time_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/data/time_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/templates/commander.html" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/templates/commander.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/water_inspect/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/templates/note.html" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/templates/note.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/templates/usercommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/templates/usercommand.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/water_inspect/views/content.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/views/content.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/views/user/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/views/user/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/views/user/forget.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/views/user/forget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/water_inspect/views/user/register_and_confirm.py" beforeDir="false" afterPath="$PROJECT_DIR$/water_inspect/views/user/register_and_confirm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,22 +31,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Flask_master$content.coverage" NAME="content Coverage Results" MODIFIED="1546434184881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/water_inspect/views" />
+    <SUITE FILE_PATH="coverage/Flask_master$time_utils.coverage" NAME="time_utils Coverage Results" MODIFIED="1546677601484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/water_inspect/app" />
     <SUITE FILE_PATH="coverage/test1$manage.coverage" NAME="manage Coverage Results" MODIFIED="1537515106709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Flask_master$cal.coverage" NAME="cal Coverage Results" MODIFIED="1546431145494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/water_inspect/data" />
     <SUITE FILE_PATH="coverage/Flask_master$send_email_bak.coverage" NAME="send_email_bak Coverage Results" MODIFIED="1545049332360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/water_inspect/app" />
-    <SUITE FILE_PATH="coverage/Flask_master$takeout.coverage" NAME="takeout Coverage Results" MODIFIED="1546435165459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/water_inspect/data" />
-    <SUITE FILE_PATH="coverage/Flask_master$run.coverage" NAME="run Coverage Results" MODIFIED="1546694658352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Flask_master$run.coverage" NAME="run Coverage Results" MODIFIED="1546963472180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Flask_master$Flask__water_inspect_app_send_mail_py_.coverage" NAME="Flask (water_inspect/app/send_mail.py) Coverage Results" MODIFIED="1545046859254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/test1$run.coverage" NAME="run Coverage Results" MODIFIED="1539088623717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test1$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1537507919630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test1$fetch.coverage" NAME="fetch Coverage Results" MODIFIED="1538727316081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/water_inspect/app" />
-    <SUITE FILE_PATH="coverage/Flask_master$fetch.coverage" NAME="fetch Coverage Results" MODIFIED="1545199170433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/water_inspect/app" />
+    <SUITE FILE_PATH="coverage/Flask_master$fetch.coverage" NAME="fetch Coverage Results" MODIFIED="1546837577807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/water_inspect/app" />
     <SUITE FILE_PATH="coverage/test1$Flask__run_py_.coverage" NAME="Flask (run.py) Coverage Results" MODIFIED="1538643443650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test1$onenet_Connect.coverage" NAME="onenet_Connect Coverage Results" MODIFIED="1538644847670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/test1$Flask__app_py_.coverage" NAME="Flask (run.py) Coverage Results" MODIFIED="1537537178244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test1$Flask__app_models_py_.coverage" NAME="Flask (app/models.py) Coverage Results" MODIFIED="1538583208535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Flask_master$Flask__water_inspect_app_models_py_.coverage" NAME="Flask (water_inspect/app/models.py) Coverage Results" MODIFIED="1545135958565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Flask_master$Flask__water_inspect_app_models_py_.coverage" NAME="Flask (water_inspect/app/models.py) Coverage Results" MODIFIED="1546963271084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test1$Flask__water_inspect_app_models_py_.coverage" NAME="Flask (water_inspect/app/models.py) Coverage Results" MODIFIED="1538726018020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -68,13 +75,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="content.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="content.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/water_inspect/views/content.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12">
-              <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+            <state relative-caret-position="221">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,63 +90,23 @@
       <file leaf-file-name="cal.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/water_inspect/data/cal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+            <state relative-caret-position="136">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+              <folding>
+                <element signature="e#39#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/water_inspect/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="314" column="14" lean-forward="true" selection-start-line="314" selection-start-column="14" selection-end-line="314" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/water_inspect/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="3" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/water_inspect/views/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="error.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/water_inspect/views/error.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/water_inspect/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="My_token.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/water_inspect/app/My_token.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="retrieve_password.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/water_inspect/app/retrieve_password.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="time_utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/water_inspect/data/time_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="117" selection-start-line="117" selection-end-line="140" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,11 +114,52 @@
       <file leaf-file-name="takeout.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/water_inspect/data/takeout.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="210" column="23" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="23" />
+            <state relative-caret-position="76">
+              <caret line="112" column="26" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/water_inspect/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fetch.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/water_inspect/app/fetch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1197">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/water_inspect/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/water_inspect/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-642">
+              <caret line="264" column="10" lean-forward="true" selection-start-line="264" selection-start-column="10" selection-end-line="264" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -172,41 +180,17 @@
       <find>POST</find>
       <find>form</find>
       <find>bundle</find>
-      <find>input-unchecked</find>
-      <find>unchecked</find>
-      <find>mainNav</find>
-      <find>sb-admin.js</find>
-      <find>mainN</find>
-      <find>sb-admin</find>
-      <find>usercommand</find>
-      <find>用户</find>
-      <find>管理员</find>
-      <find>monitor1</find>
-      <find>monitor2</find>
-      <find>Image</find>
-      <find>reconvert_time</find>
-      <find>time_dict</find>
+      <find>退出</find>
+      <find>7.12, 7.21, 7.01,</find>
       <find>alert</find>
-      <find>box</find>
-      <find>oncli</find>
-      <find>1</find>
-      <find>print</find>
-      <find>cons</find>
-      <find>tes</find>
     </findStrings>
-    <replaceStrings>
-      <replace>self.time_dict</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/500.html" />
         <option value="$PROJECT_DIR$/templates/sucess.html" />
         <option value="$PROJECT_DIR$/main/__init__.py" />
         <option value="$PROJECT_DIR$/templates/register.html" />
@@ -228,35 +212,36 @@
         <option value="$PROJECT_DIR$/water_inspect/app/send_email_bak.py" />
         <option value="$PROJECT_DIR$/water_inspect/views/confirm.py" />
         <option value="$PROJECT_DIR$/water_inspect/templates/email.html" />
-        <option value="$PROJECT_DIR$/water_inspect/app/send_mail.py" />
         <option value="$PROJECT_DIR$/water_inspect/views/register.py" />
         <option value="$PROJECT_DIR$/water_inspect/views/account.py" />
         <option value="$PROJECT_DIR$/water_inspect/app/token.py" />
         <option value="$PROJECT_DIR$/water_inspect/views/register_and_confirm.py" />
-        <option value="$PROJECT_DIR$/water_inspect/app/fetch.py" />
         <option value="$PROJECT_DIR$/water_inspect/views/auth.py" />
         <option value="$PROJECT_DIR$/water_inspect/templates/retrieve_email.html" />
-        <option value="$PROJECT_DIR$/water_inspect/views/user/forget.py" />
-        <option value="$PROJECT_DIR$/water_inspect/templates/login_new.html" />
-        <option value="$PROJECT_DIR$/water_inspect/views/user/register_and_confirm.py" />
-        <option value="$PROJECT_DIR$/water_inspect/templates/base.html" />
-        <option value="$PROJECT_DIR$/water_inspect/data/__init__.py" />
-        <option value="$PROJECT_DIR$/water_inspect/__init__.py" />
-        <option value="$PROJECT_DIR$/water_inspect/static/CSS/sb-admin.css" />
-        <option value="$PROJECT_DIR$/water_inspect/views/user/auth.py" />
-        <option value="$PROJECT_DIR$/water_inspect/templates/commander.html" />
-        <option value="$PROJECT_DIR$/water_inspect/templates/usercommand.html" />
-        <option value="$PROJECT_DIR$/water_inspect/templates/login.html" />
-        <option value="$PROJECT_DIR$/water_inspect/templates/note.html" />
-        <option value="$PROJECT_DIR$/water_inspect/app/models.py" />
-        <option value="$PROJECT_DIR$/water_inspect/data/time_utils.py" />
-        <option value="$PROJECT_DIR$/water_inspect/config.py" />
         <option value="$PROJECT_DIR$/water_inspect/templates/area-stack.html" />
+        <option value="$PROJECT_DIR$/water_inspect/templates/login_new.html" />
+        <option value="$PROJECT_DIR$/water_inspect/templates/base.html" />
+        <option value="$PROJECT_DIR$/water_inspect/templates/alarm.html" />
+        <option value="$PROJECT_DIR$/water_inspect/app/alarm.py" />
+        <option value="$PROJECT_DIR$/water_inspect/app/send_mail.py" />
+        <option value="$PROJECT_DIR$/water_inspect/views/user/register_and_confirm.py" />
+        <option value="$PROJECT_DIR$/water_inspect/templates/login.html" />
+        <option value="$PROJECT_DIR$/water_inspect/views/user/forget.py" />
+        <option value="$PROJECT_DIR$/water_inspect/templates/note.html" />
+        <option value="$PROJECT_DIR$/water_inspect/templates/usercommand.html" />
+        <option value="$PROJECT_DIR$/water_inspect/templates/commander.html" />
+        <option value="$PROJECT_DIR$/water_inspect/views/user/auth.py" />
+        <option value="$PROJECT_DIR$/water_inspect/views/background.py" />
+        <option value="$PROJECT_DIR$/water_inspect/app/fetch.py" />
+        <option value="$PROJECT_DIR$/water_inspect/app/time_utils.py" />
         <option value="$PROJECT_DIR$/water_inspect/data/fetch.py" />
+        <option value="$PROJECT_DIR$/water_inspect/__init__.py" />
+        <option value="$PROJECT_DIR$/water_inspect/config.py" />
         <option value="$PROJECT_DIR$/water_inspect/data/takeout.py" />
         <option value="$PROJECT_DIR$/water_inspect/data/cal.py" />
-        <option value="$PROJECT_DIR$/water_inspect/templates/index.html" />
         <option value="$PROJECT_DIR$/water_inspect/views/content.py" />
+        <option value="$PROJECT_DIR$/water_inspect/app/models.py" />
+        <option value="$PROJECT_DIR$/water_inspect/templates/index.html" />
       </list>
     </option>
   </component>
@@ -269,40 +254,18 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="600" />
-    <option name="y" value="95" />
-    <option name="width" value="2800" />
-    <option name="height" value="1415" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="445" />
+    <option name="y" value="-50" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Flask-master" type="cbb8eebc:String" user="Flask-master" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Flask-master" type="cbb8eebc:String" user="Flask-master" />
-              <item name="water_inspect" type="cbb8eebc:String" user="water_inspect" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Flask-master" type="cbb8eebc:String" user="Flask-master" />
-              <item name="water_inspect" type="cbb8eebc:String" user="water_inspect" />
-              <item name="app" type="cbb8eebc:String" user="app" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -315,6 +278,30 @@
               <item name="Flask-master" type="462c0819:PsiDirectoryNode" />
               <item name="water_inspect" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Flask-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flask-master" type="462c0819:PsiDirectoryNode" />
+              <item name="water_inspect" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flask-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flask-master" type="462c0819:PsiDirectoryNode" />
+              <item name="water_inspect" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flask-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flask-master" type="462c0819:PsiDirectoryNode" />
+              <item name="water_inspect" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flask-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flask-master" type="462c0819:PsiDirectoryNode" />
+              <item name="water_inspect" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -323,27 +310,27 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="print&#9;null&#9;null&#10;print(&quot;1)&#9;null&#9;null&#10;Image&#9;null&#9;null&#10;bootstrap&#9;null&#9;null&#10;login&#9;null&#9;null&#10;log&#9;null&#9;null&#10;mainNav&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://H:/Python/PythonCode/Flask-master/water_inspect/app/retrieve_password.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../datac" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Pycharm\Flask-master\water_inspect\data" />
+      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\data" />
+      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\views" />
+      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\views\content" />
       <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static" />
-      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static\JS\jquery" />
-      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static\Image" />
-      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static\JS" />
+      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static" />
-      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static\JS\chart.js" />
-      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static\JS" />
-      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static\CSS" />
-      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static\Image" />
+      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\templates" />
+      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\app" />
+      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static\bootstrap\js" />
+      <recent name="H:\Python\PythonCode\Flask-master\water_inspect\static\bootstrap\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -359,44 +346,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.run">
-    <configuration name="cal" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="test1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/water_inspect/data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/water_inspect/data/cal.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="content" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="test1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/water_inspect/views" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/water_inspect/views/content.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="fetch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="test1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -416,7 +365,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="test1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -435,7 +384,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="takeout" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="send_email_bak" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="test1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -443,12 +392,31 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/water_inspect/data" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/water_inspect/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/water_inspect/data/takeout.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/water_inspect/app/send_email_bak.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="time_utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="test1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/water_inspect/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/water_inspect/app/time_utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -484,20 +452,19 @@
     </configuration>
     <list>
       <item itemvalue="Flask server.test1" />
-      <item itemvalue="Python.run" />
       <item itemvalue="Flask server.Flask (water_inspect/app/models.py)" />
+      <item itemvalue="Python.run" />
       <item itemvalue="Python.fetch" />
-      <item itemvalue="Python.takeout" />
-      <item itemvalue="Python.cal" />
-      <item itemvalue="Python.content" />
+      <item itemvalue="Python.send_email_bak" />
+      <item itemvalue="Python.time_utils" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.takeout" />
-        <item itemvalue="Python.content" />
-        <item itemvalue="Python.cal" />
-        <item itemvalue="Python.fetch" />
+        <item itemvalue="Python.run" />
         <item itemvalue="Flask server.Flask (water_inspect/app/models.py)" />
+        <item itemvalue="Python.fetch" />
+        <item itemvalue="Python.time_utils" />
+        <item itemvalue="Python.send_email_bak" />
       </list>
     </recent_temporary>
   </component>
@@ -526,20 +493,20 @@
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.08422939" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32965517" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32616487" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.4871795" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.45014244" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2921147" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.17921147" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.8548387" visible="true" weight="0.15036379" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49865952" weight="0.29928315" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.3315412" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49865952" weight="0.32258064" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.75985664" visible="true" weight="0.25222313" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.2279709" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.1577061" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32763532" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="0" sideWeight="0.14516129" side_tool="true" weight="0.025060631" />
-      <window_info id="Favorites" order="1" sideWeight="0.23219374" side_tool="true" weight="0.22252011" />
+      <window_info id="Structure" order="0" sideWeight="0.18266979" side_tool="true" weight="0.16814874" />
+      <window_info id="Favorites" order="1" sideWeight="0.24014337" side_tool="true" visible="true" weight="0.25222313" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3291592" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -549,30 +516,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3291592" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.8548387" visible="true" weight="0.15036379" />
-      <window_info id="Structure" order="0" sideWeight="0.14516129" side_tool="true" weight="0.025060631" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.08422939" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2921147" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.45014244" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.1577061" />
-      <window_info anchor="right" id="Database" order="4" weight="0.2279709" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.43447295" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32965517" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="1" sideWeight="0.23219374" side_tool="true" weight="0.22252011" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -582,46 +525,80 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/water_inspect/static/JS/jquery-1.8.3.min.js">
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/JS/chart.js/api.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/static/JS/jquery-easing/jquery.easing.js">
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/bootstrap/css/bootstrap.bundle.js" />
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/bootstrap/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/views/user/register_and_confirm.py">
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/bootstrap/js/bootstrap.bundle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/JS/jquery/jquery.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/views/user/account.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+        <state relative-caret-position="326">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/static/JS/jquery/jquery.js">
+    <entry file="file://$PROJECT_DIR$/water_inspect/templates/alarm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Flask-master/water_inspect/app/alarm.py" />
+    <entry file="file://$USER_HOME$/Desktop/Flask-master/water_inspect/app/models.py" />
+    <entry file="file://$PROJECT_DIR$/water_inspect/app/alarm.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/datatables/jquery.dataTables.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/water_inspect/static/bootstrap/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/static/JS/chart.js/api.js">
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/bootstrap-3.3.7-dist/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/app/send_mail.py">
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/images/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/images/logo.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/static/images/input-checked.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/views/user/register_and_confirm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="144">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/app/send_email_bak.py">
+    <entry file="file://E:/Virtualenv/Flask/Lib/site-packages/werkzeug/utils.py" />
+    <entry file="file://$PROJECT_DIR$/water_inspect/views/user/forget.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="958">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/Virtualenv/Flask/Lib/site-packages/werkzeug/local.py" />
+    <entry file="file://E:/Virtualenv/Flask/Lib/site-packages/flask_login/utils.py" />
+    <entry file="file://$PROJECT_DIR$/water_inspect/templates/hh.html" />
+    <entry file="file://$PROJECT_DIR$/water_inspect/templates/area-stack.html" />
+    <entry file="file://$PROJECT_DIR$/water_inspect/templates/SandU.html" />
     <entry file="file://$PROJECT_DIR$/water_inspect/templates/retrieve_email.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -629,277 +606,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/templates/register.html">
+    <entry file="file://$PROJECT_DIR$/water_inspect/templates/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state relative-caret-position="144">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/app/fetch.py" />
-    <entry file="file://$PROJECT_DIR$/water_inspect/static/bootstrap/js/bootstrap.bundle.js">
+    <entry file="file://$PROJECT_DIR$/water_inspect/templates/500.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/后台管理2/index.html" />
-    <entry file="file://$PROJECT_DIR$/water_inspect/static/bootstrap/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/water_inspect/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1777" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/static/bootstrap/css/bootstrap-theme.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/static/CSS/sb-admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/venv/Lib/site-packages/pip/_vendor/html5lib/html5parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="413" column="8" selection-start-line="413" selection-start-column="8" selection-end-line="413" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/venv/Lib/site-packages/flask_login/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/views/user/forget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/venv/Lib/site-packages/flask_bootstrap/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-684" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/templates/sucess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/templates/hh.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/views/user/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="55" lean-forward="true" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/templates/SandU.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/venv/Lib/site-packages/pymysql/cursors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="169" selection-start-line="169" selection-end-line="169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/views/user/account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        <state relative-caret-position="151">
+          <caret line="164" column="37" selection-start-line="164" selection-start-column="37" selection-end-line="164" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/water_inspect/templates/usercommand.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        <state relative-caret-position="183">
+          <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/water_inspect/templates/commander.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://E:/Virtualenv/Flask/Lib/site-packages/flask_login/mixins.py" />
+    <entry file="file://$PROJECT_DIR$/water_inspect/views/user/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="168">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/static/JS/chart.js/echart-gl.js">
+    <entry file="file://$PROJECT_DIR$/water_inspect/views/background.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="406" column="20" selection-start-line="406" selection-start-column="20" selection-end-line="406" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/content.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="19" column="81" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1248">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/water_inspect/templates/note.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="24">
+          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/data/__init__.py">
+    <entry file="file://$PROJECT_DIR$/water_inspect/views/error.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        <state relative-caret-position="192">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/app/time_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/app/send_email_bak.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/app/retrieve_password.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/app/My_token.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/app/send_mail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/app/fetch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="1197">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/venv/Lib/site-packages/sqlalchemy/util/compat.py">
+    <entry file="file://$PROJECT_DIR$/water_inspect/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="154" column="8" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
+        <state relative-caret-position="76">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/water_inspect/data/fetch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-start-column="2" selection-end-line="33" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/templates/area-stack.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="127" column="35" lean-forward="true" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        <state relative-caret-position="457">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/app/My_token.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/app/retrieve_password.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/data/time_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/water_inspect/data/takeout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="210" column="23" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="23" />
+        <state relative-caret-position="76">
+          <caret line="112" column="26" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/water_inspect/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/views/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/views/error.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="98">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/water_inspect/data/cal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+        <state relative-caret-position="136">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="e#39#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/water_inspect/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/../water_inspect/venv/Lib/site-packages/flask_sqlalchemy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="314" column="14" lean-forward="true" selection-start-line="314" selection-start-column="14" selection-end-line="314" selection-end-column="14" />
+        <state relative-caret-position="152">
+          <caret line="117" selection-start-line="117" selection-end-line="140" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/water_inspect/views/content.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+        <state relative-caret-position="221">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/water_inspect/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-642">
+          <caret line="264" column="10" lean-forward="true" selection-start-line="264" selection-start-column="10" selection-end-line="264" selection-end-column="10" />
         </state>
       </provider>
     </entry>

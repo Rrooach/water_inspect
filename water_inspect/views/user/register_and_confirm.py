@@ -20,6 +20,10 @@ class RegisterFrom(FlaskForm):
 
 @blue_register_and_confirm.route("/register", methods=["POST"])
 def register():
+    user = User.query.filter_by(email=request.form["inputEmail2"])
+    if user is None:
+        return redirect("/login")
+
     user = User(
         email=request.form["inputEmail2"],
         username=request.form["inputName2"],

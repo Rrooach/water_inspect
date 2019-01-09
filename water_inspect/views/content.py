@@ -1,85 +1,65 @@
-from flask import jsonify
-import water_inspect.config
-from flask import Blueprint, redirect, flash, render_template, request, url_for
-from flask_login import login_user, login_required
-from water_inspect.app.models import User
-from water_inspect.data.takeout import takeout
-from water_inspect.data.cal import GM
-
 import json
+
+from flask import Blueprint, render_template, request, jsonify
+from flask_login import login_required, current_user
+
+
+import water_inspect.config
+from water_inspect.app.models import Data
+from water_inspect.app.time_utils import *
+from water_inspect.data.cal import GM
+from water_inspect.data.takeout import takeout, fake
+
 blue_content = Blueprint('blue_content', __name__)
 
 
-@blue_content.route('/', methods=['GET', 'POST'])
-def index():
-    if request.method == "GET":
-        return render_template("login.html")
-    else:
-        email = request.form["inputEmail1"]
-        password = request.form["inputPassword1"]
-        user = User.query.filter_by(email=email).first()
-        if user is None or not user.verify_password(password):
-            return redirect(url_for("blue_auth.login"))
-        login_user(user)
-        flash("登录成功", "success")
-        return redirect('/success')
-
-
-@blue_content.route('/test', methods=["GET", "POST"])
-def test():
-    return render_template('note.html')
-
-
-@blue_content.route('/success', methods=['GET', 'POST'])
+@blue_content.route('/index', methods=['GET', 'POST'])
 @login_required
-def islog():
-    if request.method == 'POST':
-        data = request.get_data()
-        data = str(data, encoding = "utf-8")
-        data = json.loads(data)
+def index():
+    # AJAX交互
+    if request.method == "POST":
+        data = json.loads(str(request.get_data(), encoding="utf-8"))
         water_inspect.config.param = data['attribute']
         water_inspect.config.time = data['interval']
-        print(data['attribute'])
-        print(data['interval'])
         # 声明一个take类
         Take = takeout(water_inspect.config.param, water_inspect.config.time)
         # 计算所需的时间
         Take.data_get()
         # 获取所需数据
-        #TimeTable ->所需要的y轴， result -> x轴
-        water_inspect.config.TimeTable, water_inspect.config.result= Take.data_trans()
-
-        # 开始生成预测序列
+        # TimeTable ->所需要的x轴， result ->y轴
+        water_inspect.config.TimeTable, water_inspect.config.result = Take.data_trans()
         m = 1
-        gm = GM()
-        Diff, Prb = gm.mat_cal()
-        res = gm.perdict(Diff, Prb, m)
-        for i in range(0, res.size):
-            water_inspect.config.result.append(res[i])
-        water_inspect.config.result = ["asd", "asd", "adasd", "adasfddf", "adasdas", "adasda", "asdad", "adasd", "Asdasd"]
-        water_inspect.config.TimeTable = [12, 12, 323,34,234,234,234,2,1]
-        y = water_inspect.config.result
-        x = water_inspect.config.TimeTable
+        gm = GM(water_inspect.config.result)
+        try:
+            Diff, Prb = gm.mat_cal()
+            res = gm.perdict(Diff, Prb, m)
+        except Exception:
+            FAKE = fake(water_inspect.config.time, water_inspect.config.param)
+            water_inspect.config.result = FAKE.temp_data()
+            rres = water_inspect.config.result
+            fake_water = GM(rres)
+            Diff, Prb = fake_water.mat_cal()
+            res = fake_water.perdict(Diff, Prb, m)
+            for i in range(0, res.size):
+                water_inspect.config.result.append(res[i])
+            water_inspect.config.TimeTable.append("预测值")
+        else:
+            for i in range(0, res.size):
+                water_inspect.config.result.append(res[i])
+            water_inspect.config.TimeTable.append("预测值")
+        x = water_inspect.config.result
+        y = water_inspect.config.TimeTable
+
         return jsonify(x, y)
-    else:
-        return render_template('index.html')
 
-# @blue_content.before_request
-# def auth(*args):
-#     if session.get('email') is None:
-#         return '未登录， 拦截'
-#     return None
+    return render_template('index.html')
 
-#redirect to commander page
-@blue_content.route('/commander', methods=['GET', 'POST'])
-def commander():
-    return render_template('commander.html')
 
-#redirect to note page
-@blue_content.route('/note', methods=['GET', 'POST'])
-def note():
-    return render_template('note.html')
-#redirect to usercommand page
-@blue_content.route('/usercommand', methods=['GET', 'POST'])
-def usercommand():
-    return render_template('usercommand.html')
+@blue_content.route('/test', methods=['GET', 'POST'])
+def test():
+    now = '2019-01-05 16:50:00'
+
+    data = Data.query.filter(Data.time.between(time_before_hour(now), now)).all()
+    for i in data:
+        print(i)
+    return "Done"

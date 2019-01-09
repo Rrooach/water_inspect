@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -259,20 +260,20 @@ function monitor1(){
       $("input[name='radio1']").each(function(){
             if(this.checked){
 				attribute=$(this).val();
-				alert(attribute)
+				{#alert(attribute)#}
             }
 		})
 
 			$("input[name='radio2']").each(function(){
             if(this.checked){
 				interval=$(this).val();
-				alert(interval)
+				{#alert(interval)#}
             }
 		})
 
         $.ajax({
              type: "POST",
-             url: "/success",
+             url: "/index",
              data:JSON.stringify( {attribute:attribute,interval:interval}),
              dataType: "json",
              success: function(data1){

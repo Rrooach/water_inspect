@@ -1,134 +1,186 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login and register</title>
 
-{% block head %}
-    {{ super() }}
-    <link href={{ url_for('static', filename='CSS/login.css') }} rel="stylesheet">
-    <script type="text/javascript" src={{ url_for('static', filename='JS/jquery-3.3.1.min.js') }}></script>
-    <script type="text/javascript" src={{ url_for('static', filename='JS/vue.js/vue.js') }}></script>
-    <script type="text/javascript" src={{ url_for('static', filename='JS/login.js') }}></script>
-{% endblock %}
+    <script src="../static/jquery/jquery-3.3.1.min.js"></script>
 
+    <link href="../static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 
-{% block body %}
-    <div class="bg">
-        <div class="container both">
-            <div class="row" style="display: -webkit-box;">
-                <div class="col-md-8 left bg1" id="left">
+    <link href="../static/CSS/login.css" rel="stylesheet">
 
-                    <div class="row left_body_2" id="left_body_2">
-                        <div class="right_header">
-                            <h1>Welcome Back!</h1>
-                        </div>
+    <script src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
-                        <div class="right_body">
-                            <h4>To keep connected with us please login with your personal info</h4>
-                        </div>
-                        <div class="right_footer">
-                            <button type="submit" class="submit2" id="sign_in">SIGN IN</button>
-                        </div>
+    <script src="../static/JS/vue.js/vue.js"></script>
+
+    <script src="../static/JS/login.js"></script>
+</head>
+
+<body>
+<div class="bg">
+    <div class="container both">
+        <div class="row" style="display: -webkit-box;">
+            <div class="col-md-8 left bg1" id="left">
+
+                <div class="row left_body_2" id="left_body_2">
+                    <div class="right_header">
+                        <h1>Welcome Back!</h1>
                     </div>
 
-                    <div id="whole_left">
-                        <div class="left_header">
-                            <a><img src={{ url_for('static', filename='images/logo.jpg') }}></a>
-                        </div>
-                        <div class="left_body">
-                            <div>
-                                <h1 class="sign">Sign in to Hartt</h1>
-                            </div>
-                            <div class="link">
-                                <div class="f"><a>f</a></div>
-                                <div class="g"><a>t</a></div>
-                                <div class="in"><a>i</a></div>
-                            </div>
-
-                            <div class="tip">
-                                <h5>or use your email account</h5>
-                            </div>
-
-                            <form class="form-horizontal account" method="post" action={{ url_for('blue_auth.login') }} >
-                                <div class="form-group email">
-                                    <label for="inputEmail3" class="col-md-4 control-label">Email :</label>
-                                    <div class="col-md-6">
-                                        <input type="email" class="form-control" name="inputEmail1" id="inputEmail1" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="form-group password">
-                                    <label for="inputPassword3" class="col-md-4 control-label">Password :</label>
-                                    <div class="col-md-6">
-                                        <input type="password" class="form-control" name="inputPassword1" id="inputPassword1"
-                                               placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="form-group remember">
-                                    <div class="">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> Remember me
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group forgot col-md-offset-4">
-                                    <h4><a href="#">Forgot your password?</a></h4>
-                                </div>
-
-                                <button type="submit" class="submit1">SIGN IN</button>
-                            </form>
-                        </div>
+                    <div class="right_body">
+                        <h4>To keep connected with us please login with your personal info</h4>
+                    </div>
+                    <div class="right_footer">
+                        <button type="submit" class="submit2" id="sign_in">SIGN IN</button>
                     </div>
                 </div>
-                <div class="col-md-4 right bg2" id="right">
-                    <div id="whole_right">
-                        <div class="row">
-                            <div class="right_header">
-                                <h1>Hello,Friend!</h1>
-                            </div>
-                            <div class="right_body">
-                                <h4>Enter your personal details and start journey with us</h4>
-                            </div>
-                            <div class="right_footer">
-                                <button type="submit" class="submit2" id="sign_up">SIGN UP</button>
-                            </div>
-                        </div>
+
+                <div id="whole_left">
+                    <div class="left_header">
+                        <a><img src="../static/images/logo.jpg"></a>
                     </div>
-                    <div class="right_body_2" id="right_body_2">
+                    <div class="left_body">
                         <div>
-                            <h1 class="sign">Create account</h1>
+                            <h1 class="sign">Sign in to Hartt</h1>
                         </div>
                         <div class="link">
                             <div class="f"><a>f</a></div>
                             <div class="g"><a>t</a></div>
                             <div class="in"><a>i</a></div>
                         </div>
+
                         <div class="tip">
-                            <h5>or use your email for registration</h5>
+                            <h5>or use your email account</h5>
                         </div>
-                       <form class="form-horizontal account" method="post" action={{ url_for('blue_register_and_confirm.register') }} >
+
+                        <form class="form-horizontal account" action="/login" method="post">
                             <div class="form-group email">
-                                <label for="inputEmail3" class="col-md-4 control-label">Name :</label>
+                                <label for="inputEmail3" class="col-md-4 control-label">Email :</label>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="inputName2" id="inputName2" placeholder="Name">
-                                </div>
-                            </div>
-                            <div class="form-group password">
-                                <label for="inputPassword3" class="col-md-4 control-label">Email :</label>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" name="inputEmail2" id="inputEmail2" placeholder="Email">
+                                    <input type="email" class="form-control" name="inputEmail1" id="inputEmail1" placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group password">
                                 <label for="inputPassword3" class="col-md-4 control-label">Password :</label>
                                 <div class="col-md-6">
-                                    <input type="password" class="form-control" name="inputPassword2" id="inputPassword2"
-                                           placeholder="Password">
+                                    <input type="password" class="form-control" name="inputPassword1" id="inputPassword1"
+                                               placeholder="Password">
                                 </div>
                             </div>
-                            <button type="submit" class="submit1">SIGN UP</button>
+                            <div class="form-group remember">
+                                <div class="">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group forgot col-md-offset-4">
+                                <h4 style="cursor: pointer;"><a data-toggle="modal" data-target="#exampleModal">Forgot
+                                    your password?</a></h4>
+                            </div>
+
+                            <button type="submit" class="submit1">SIGN IN</button>
                         </form>
+
+
                     </div>
                 </div>
             </div>
+            <div class="col-md-4 right bg2" id="right">
+                <div id="whole_right">
+                    <div class="row">
+                        <div class="right_header">
+                            <h1>Hello,Friend!</h1>
+                        </div>
+
+                        <div class="right_body">
+                            <h4>Enter your personal details and start journey with us</h4>
+                        </div>
+                        <div class="right_footer">
+                            <button type="submit" class="submit2" id="sign_up">SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right_body_2" id="right_body_2">
+                    <div>
+                        <h1 class="sign">Create account</h1>
+                    </div>
+                    <div class="link">
+                        <div class="f"><a>f</a></div>
+                        <div class="g"><a>t</a></div>
+                        <div class="in"><a>i</a></div>
+                    </div>
+
+                    <div class="tip">
+                        <h5>or use your email for registration</h5>
+                    </div>
+
+                    <form class="form-horizontal account" method="post" action="/register">
+                        <div class="form-group email">
+                            <label for="inputEmail3" class="col-md-4 control-label">Name :</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="inputName2" id="inputName2" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group password">
+                            <label for="inputPassword3" class="col-md-4 control-label">Email :</label>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" name="inputEmail2" id="inputEmail2" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group password">
+                            <label for="inputPassword3" class="col-md-4 control-label">Password :</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="inputPassword2" id="inputPassword2"
+                                           placeholder="Password">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit1">SIGN UP</button>
+                    </form>
+
+                </div>
+
+            </div>
         </div>
     </div>
-{% endblock %}
+</div>
+
+<!-- 找回密码 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="exampleModalLabel">Find back the password</h4>
+            </div>
+            <div class="modal-body">
+                <form action="/forget" method="post" >
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Please enter your email address when you
+                            register your account: </label>
+                        <input type="text" class="form-control" id="recipient-name" name="forgetEmail">
+                    </div>
+                    <!-- <div class="form-group">
+                      <label for="message-text" class="control-label">Message:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div> -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="Send">Send E-mail</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

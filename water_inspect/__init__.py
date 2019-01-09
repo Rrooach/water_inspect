@@ -1,9 +1,8 @@
 from flask import Flask
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
-from flask_mail import Mail
-
 from water_inspect.app.models import User
+from flask_mail import Mail
 
 app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/static')
 bootstrap = Bootstrap(app)
@@ -26,14 +25,11 @@ app.config['MAIL_PASSWORD'] = 'lubmicbncseybaij'
 app.config['MAIL_DEFAULT_SENDER'] = "ocean-z@qq.com"
 mail = Mail(app)
 
-time, interval = 0, 0
-
-
 # 注册蓝图
 from .views.error import blue_error
 app.register_blueprint(blue_error)
 
-from .views.content import blue_content
+from water_inspect.views.content import blue_content
 app.register_blueprint(blue_content)
 
 from water_inspect.views.user.auth import blue_auth
@@ -47,6 +43,9 @@ app.register_blueprint(blue_register_and_confirm)
 
 from water_inspect.views.user.forget import blue_forget
 app.register_blueprint(blue_forget)
+
+from water_inspect.views.background import blue_background
+app.register_blueprint(blue_background)
 
 loginmanager.init_app(app)
 
