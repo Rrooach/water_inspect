@@ -8,6 +8,9 @@ import numpy as np
 import math
 import water_inspect.config
 
+history_data = water_inspect.config.result
+
+
 # m = int(input())
 # print(type(m))
 

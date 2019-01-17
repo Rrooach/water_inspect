@@ -1,20 +1,19 @@
 import time
 
-from flask import Flask
 from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, BOOLEAN, DateTime
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from water_inspect import app as current_app
+from water_inspect import loginmanager
 
-app = Flask(__name__)
+db = SQLAlchemy(current_app)
 
-app.config['SECRET_KEY'] = 'hard to guess string'
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:syh7716@localhost:3306/water"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-db = SQLAlchemy(app)
+@loginmanager.user_loader
+def load_user(id):
+    return User.query.filter_by(id=int(id)).first()
 
 
 def convert_time(str_time):
@@ -96,7 +95,7 @@ class User(UserMixin, db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
-#
+
 # db.drop_all()
 # db.create_all()
 # u1 = User(email="982483744@qq.com", username="Ocean", password="zhangyang123", is_admin=True, confirmed=True)
@@ -115,8 +114,7 @@ class User(UserMixin, db.Model):
 #     4.6232)
 # db.session.add(data)
 # db.session.commit()
-# #
-# db.create_all()
+#
 # note1 = Note(
 #     "网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢网站很好看也很实用 喜欢",
 #     "王五",

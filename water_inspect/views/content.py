@@ -1,12 +1,12 @@
 import json
 
 from flask import Blueprint, render_template, request, jsonify
-from flask_login import login_required, current_user
+from flask_login import login_required
 
 
 import water_inspect.config
-from water_inspect.app.models import Data
-from water_inspect.app.time_utils import *
+from water_inspect.utils.models import Data
+from water_inspect.utils.time_utils import *
 from water_inspect.data.cal import GM
 from water_inspect.data.takeout import takeout, fake
 
@@ -35,7 +35,9 @@ def index():
             res = gm.perdict(Diff, Prb, m)
         except Exception:
             FAKE = fake(water_inspect.config.time, water_inspect.config.param)
-            water_inspect.config.result = FAKE.temp_data()
+            water_inspect.config.result, water_inspect.config.TimeTable = FAKE.temp_data()
+            for i in water_inspect.config.TimeTable:
+                print(i)
             rres = water_inspect.config.result
             fake_water = GM(rres)
             Diff, Prb = fake_water.mat_cal()
@@ -47,19 +49,13 @@ def index():
             for i in range(0, res.size):
                 water_inspect.config.result.append(res[i])
             water_inspect.config.TimeTable.append("预测值")
+
         x = water_inspect.config.result
         y = water_inspect.config.TimeTable
-
+        # for i in x:
+        #     print(i)
+        # for i in y:
+        #     print(i)
         return jsonify(x, y)
 
     return render_template('index.html')
-
-
-@blue_content.route('/test', methods=['GET', 'POST'])
-def test():
-    now = '2019-01-05 16:50:00'
-
-    data = Data.query.filter(Data.time.between(time_before_hour(now), now)).all()
-    for i in data:
-        print(i)
-    return "Done"

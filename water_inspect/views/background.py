@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, flash
 from flask_login import login_required, current_user
 
-from water_inspect.app.models import Note, User, db
+from water_inspect.utils.models import Note, User, db
 
 blue_background = Blueprint('blue_background', __name__)
 
@@ -20,8 +20,11 @@ def note():
     if noteid is not None:
         note = Note.query.filter_by(id=noteid).first()
         db.session.delete(note)
-        db.session.commit()
-
+        try:
+          db.session.commit()
+        except BaseException as e:
+            print(e)
+            db.session.rollback()
     notes = Note.query.all()
     return render_template('note.html', notes=notes)
 
@@ -33,13 +36,21 @@ def usercommand():
     if request.args.get("delete") is not None:
         user = User.query.filter_by(id=request.args["userid"]).first()
         db.session.delete(user)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except BaseException as e:
+            print(e)
+            db.session.rollback()
         return redirect("/usercommand")
     elif request.args.get("update") is not None:
         user = User.query.filter_by(id=request.args["userid"]).first()
         user.is_admin = True
         db.session.add(user)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except BaseException as e:
+            print(e)
+            db.session.rollback()
         return redirect("/usercommand")
 
     users = User.query.all()

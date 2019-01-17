@@ -44,14 +44,14 @@ def _list_releases():
     osx machines.
 
     The paths we will search are in the format:
-    /Applications/MATLAB_R[YEAR][VERSION].app/bin/matlab
+    /Applications/MATLAB_R[YEAR][VERSION].utils/bin/matlab
     We will try the latest version first. If no path is found, None is reutrned.
     '''
     if is_linux():
         base_path = '/usr/local/MATLAB/R%d%s/bin/matlab'
     else:
         # assume mac
-        base_path = '/Applications/MATLAB_R%d%s.app/bin/matlab'
+        base_path = '/Applications/MATLAB_R%d%s.utils/bin/matlab'
     years = range(2050,1990,-1)
     release_letters = ('h', 'g', 'f', 'e', 'd', 'c', 'b', 'a')
     for year in years:
@@ -98,7 +98,7 @@ def find_matlab_version(process_path):
     matlab_dir_name = os.path.basename(matlab_path)
     version = matlab_dir_name
     if not is_linux():
-        version = matlab_dir_name.replace('MATLAB_', '').replace('.app', '')
+        version = matlab_dir_name.replace('MATLAB_', '').replace('.utils', '')
     if not is_valid_release_version(version):
         return None
     return version
@@ -128,7 +128,7 @@ class MatlabPipe(object):
         """ Inits the class.
 
         matlab path should be a path to the matlab executeable. For example:
-        /Applications/MATLAB_R2010b.app/bin/matlab
+        /Applications/MATLAB_R2010b.utils/bin/matlab
         """
         if matlab_version is None and matlab_process_path is not None:
             matlab_version = find_matlab_version(matlab_process_path)

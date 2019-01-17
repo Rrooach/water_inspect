@@ -1,8 +1,8 @@
 import requests
 import json
 
-from water_inspect.app.alarm import alarm
-from water_inspect.app.models import *
+from water_inspect.utils.alarm import alarm
+from water_inspect.utils.models import *
 
 db = SQLAlchemy(app)
 

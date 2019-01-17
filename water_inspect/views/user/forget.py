@@ -4,10 +4,10 @@ from flask import Blueprint, render_template, flash, redirect, url_for, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
-from water_inspect.app.My_token import generate_confirmation_token, confirm_token
+from water_inspect.utils.My_token import generate_confirmation_token, confirm_token
 
-from water_inspect.app.models import User, db
-from water_inspect.app.send_mail import send_mail
+from water_inspect.utils.models import User, db
+from water_inspect.utils.send_mail import send_mail
 
 blue_forget = Blueprint('blue_forget', __name__)
 
@@ -54,5 +54,9 @@ def confirm(token):
 
     user.password = new_password
     db.session.add(user)
-    db.session.commit()
+    try:
+        db.session.commit()
+    except BaseException as e:
+        print(e)
+        db.session.rollback()
     return "You password has reset to {}".format(new_password)

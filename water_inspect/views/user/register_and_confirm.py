@@ -4,15 +4,16 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, Email
 
-from water_inspect.app.models import User, db
-from water_inspect.app.send_mail import send_mail
-from water_inspect.app.My_token import generate_confirmation_token, confirm_token
+from water_inspect.utils.models import User, db
+from water_inspect.utils.send_mail import send_mail
+from water_inspect.utils.My_token import generate_confirmation_token, confirm_token
 
 blue_register_and_confirm = Blueprint('blue_register_and_confirm', __name__)
 
 
 class RegisterFrom(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
+    email = StringField('Email', validators=[
+                        DataRequired(), Length(1, 64), Email()])
     psw = PasswordField('Password', validators=[DataRequired()])
     name = StringField('Name', validators=[DataRequired(), Length(1, 64)])
     submit = SubmitField('Submit')
@@ -32,10 +33,15 @@ def register():
         is_admin=False
     )
     db.session.add(user)
-    db.session.commit()
+    try:
+        db.session.commit()
+    except BaseException as e:
+        print(e)
+        db.session.rollback()
 
     token = generate_confirmation_token(user.email)
-    confirm_url = url_for('blue_register_and_confirm.confirm_email', token=token, _external=True)
+    confirm_url = url_for(
+        'blue_register_and_confirm.confirm_email', token=token, _external=True)
     html = render_template('confirm_email.html', confirm_url=confirm_url)
     subject = 'Please confirm your email'
     send_mail(user.email, subject, html)
@@ -60,6 +66,10 @@ def confirm_email(token):
     else:
         user.confirmed = True
         db.session.add(user)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except BaseException as e:
+            print(e)
+            db.session.rollback()
         flash('You have confirmed your account. Thanks!', 'success')
-    return redirect("/success")
+    return redirect("/index")

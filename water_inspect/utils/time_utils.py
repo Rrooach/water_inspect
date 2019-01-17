@@ -36,3 +36,12 @@ def time_before_month(now=None):
         now = convert_time(now)
 
     return reconvert_time(now - 3600 * 24 * 30)
+
+
+def time_before_week(now=None):
+    if now is None:
+        now = int(time.time())
+    else:
+        now = convert_time(now)
+
+    return reconvert_time(now - 3600 * 24 * 7)

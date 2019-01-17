@@ -1,14 +1,16 @@
-from flask import Blueprint, session, redirect, flash, render_template, request, url_for
+from flask import (Blueprint, flash, redirect, render_template, request,
+                   session, url_for)
+from flask_login import current_user, login_required, login_user, logout_user
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import DataRequired, Length, Email
-from flask_login import login_user, logout_user, login_required, current_user
-from water_inspect.app.models import User
+from wtforms import BooleanField, PasswordField, StringField, SubmitField
+from wtforms.validators import DataRequired, Email, Length
+
+from water_inspect.utils.models import User
 
 blue_auth = Blueprint('blue_auth', __name__)
 
 
-@blue_auth.route('/', methods=["GET", "POST"])
+@blue_auth.route('/', methods=["GET", "POST"])     # 使用多个route来绑定多个路由映射
 @blue_auth.route('/login', methods=['GET', 'POST'])
 def login():
     if not current_user.is_anonymous:
@@ -31,6 +33,7 @@ def login():
 @login_required
 def logout():
     logout_user()
+
     flash("you have logout!")
     return redirect('/login')
 

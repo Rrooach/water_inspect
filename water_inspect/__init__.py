@@ -1,8 +1,9 @@
 from flask import Flask
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
-from water_inspect.app.models import User
 from flask_mail import Mail
+
+
 
 app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/static')
 bootstrap = Bootstrap(app)
@@ -23,6 +24,11 @@ app.config['Mail_USE_TLS'] = False
 app.config['MAIL_USERNAME'] = 'ocean-z@qq.com'
 app.config['MAIL_PASSWORD'] = 'lubmicbncseybaij'
 app.config['MAIL_DEFAULT_SENDER'] = "ocean-z@qq.com"
+app.config['SECRET_KEY'] = 'hard to guess string'
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:syh7716@localhost:3306/water"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+
 mail = Mail(app)
 
 # 注册蓝图
@@ -49,7 +55,7 @@ app.register_blueprint(blue_background)
 
 loginmanager.init_app(app)
 
-
-@loginmanager.user_loader
-def load_user(id):
-    return User.query.filter_by(id=int(id)).first()
+#
+# @loginmanager.user_loader
+# def load_user(id):
+#     return User.query.filter_by(id=int(id)).first()
