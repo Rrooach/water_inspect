@@ -49,7 +49,7 @@ def register():
     login_user(user)
 
     flash("A confirmation email has been sent via email", 'success')
-    return redirect("/success")
+    return redirect("/login")
 
 
 @blue_register_and_confirm.route("/confirm/<token>")

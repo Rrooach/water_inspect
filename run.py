@@ -12,4 +12,4 @@ if __name__ == '__main__':
     Fetch = fetch_check()
     scheduler.add_job(id ="job1", func=Fetch.accquir, args=(), trigger='interval', seconds=8)
     scheduler.start()
-    app.run(debug=True,port = 80, host = "0.0.0.0")
+    app.run(debug=True)

@@ -53,6 +53,9 @@ app.register_blueprint(blue_forget)
 from water_inspect.views.background import blue_background
 app.register_blueprint(blue_background)
 
+from water_inspect.utils.alarm import blue_alarm
+app.register_blueprint(blue_alarm)
+
 loginmanager.init_app(app)
 
 #

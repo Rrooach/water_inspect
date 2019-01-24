@@ -3,7 +3,7 @@ import json
 
 from water_inspect.utils.alarm import alarm
 from water_inspect.utils.models import *
-
+from water_inspect import  app
 db = SQLAlchemy(app)
 
 
